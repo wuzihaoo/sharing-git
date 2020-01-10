@@ -1,0 +1,28 @@
+report about future's test 
+
+
+option netG  resnet_9blocks | resnet_6blocks | unet_256 | unet_128  
+--n_layers_D 3 5 7 9 
+--lr: default=0.0002 :
+
+
+
+
+U-net (256):
+Total time = 9 hrs
+python3 train.py --dataroot ./../../datasets/ManWoman_dataset --name ManWomanCycleGANunet  --model cycle_gan --netG unet_256 --netD n_layers --n_layers_D 5 --niter 300 --lr 0.001 --niter_decay 300
+//CURRENT ADJUSTMENT B/C UNET RUNS FASTER - @shenxin try running this on ACCRE
+
+
+U-net (256):
+Total time = 9 hrs
+python3 train.py --dataroot ./../../datasets/ManWoman_dataset --name ManWomanCycleGANunet  --model cycle_gan --netG unet_256 --netD n_layers --n_layers_D 7 --niter 300 --lr 0.0005 --niter_decay 300
+//CURRENT ADJUSTMENT B/C UNET RUNS FASTER - @shenxin try running this on ACCRE
+
+
+
+
+
+
+
+
